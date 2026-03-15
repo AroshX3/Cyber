@@ -1,16 +1,17 @@
 import React from "react";
-import iphoneGold from "../../images/iphone_gold.png";
-import iphoneBlue from '../../images/iphone_blue (1).png'
-import headphone from "../../images/menu2airpods.png";
-import watch from "../../images/menu2applewatch.png";
+import iphoneGold from "../../images/bal/iphone_gold.png";
+import iphoneBlue from '../../images/bal/iphone_blue (1).png'
+import headphone from "../../images/bal/menu2airpods.png";
+import watch from "../../images/bal/menu2applewatch.png";
 import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router";
 const Discount = () => {
   return (
     <>
       <section>
         <div className="container">
           <div className="pb-20">
-            <div className="items grid grid-cols-4 gap-4  ">
+            <div className="items grid grid-cols-2 sm:grid-cols-4 gap-4 ">
               <div className=" bg-[#F6F6F6]">
                 <div className="flex justify-end ">
                   <FaHeart className="text-[25px] mt-4" />
@@ -25,12 +26,12 @@ const Discount = () => {
                   $1437
                 </h4>
                 <div className="button pb-6 pt-9 flex justify-center items-center">
-                  <a
+                  <Link
                     className="font-popins bg-black rounded-lg text-white text-[14px] leading-6 px-16 py-3 "
-                    href=""
+                    to="/productpage"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="bg-[#F6F6F6]">
@@ -47,12 +48,12 @@ const Discount = () => {
                   $549
                 </h4>
                 <div className="button pb-6 pt-9 flex justify-center items-center">
-                  <a
+                  <Link
                     className="font-popins bg-black rounded-lg text-white text-[14px] leading-6 px-16 py-3 "
-                    href=""
+                    to="/productpage"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="bg-[#F6F6F6]">
@@ -69,12 +70,12 @@ const Discount = () => {
                   $399
                 </h4>
                 <div className="button pb-6 pt-9 flex justify-center items-center">
-                  <a
+                  <Link
                     className="font-popins bg-black rounded-lg text-white text-[14px] leading-6 px-16 py-3 "
-                    href=""
+                    to="/productpage"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="bg-[#F6F6F6]">
@@ -91,12 +92,12 @@ const Discount = () => {
                   $1499
                 </h4>
                 <div className="button pb-6 pt-9 flex justify-center items-center">
-                  <a
+                  <Link
                     className="font-popins bg-black rounded-lg text-white text-[14px] leading-6 px-16 py-3 "
-                    href=""
+                    to="/productpage"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

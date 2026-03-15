@@ -1,37 +1,41 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import ihpone from "../../images/menu2iphone.png";
-import camera from '../../images/menu2camera.png'
-import smartWatch from '../../images/menu2applewatch.png'
-import airpods from '../../images/menu2airpods.png'
-import samsungWatch from '../../images/menu2samsungwatch.png'
-import galaxyFold from '../../images/menu2galaxyfold.png'
-import airPhone from '../../images/menu2airphone.png'
-import applePad from '../../images/menu2Macbook.png'
+import ihpone from "../../images/bal/menu2iphone.png";
+import camera from '../../images/bal/menu2camera.png'
+import smartWatch from '../../images/bal/menu2applewatch.png'
+import airpods from '../../images/bal/menu2airpods.png'
+import samsungWatch from '../../images/bal/menu2samsungwatch.png'
+import galaxyFold from '../../images/bal/menu2galaxyfold.png'
+import airPhone from '../../images/bal/menu2airphone.png'
+import applePad from '../../images/bal/menu2Macbook.png'
 
 const NewArrival = () => {
   return (
     <>
       <section>
         <div className="container">
-          <div className="">
+          <div className="p-4 sm:p-0">
             <div className="menu2 pb-8 pt-14.5">
               <ul className="flex gap-8">
                 <li>
-                  <a className="" href="">
+                  <a className="font-popins font-medium text-[18px]" href="">
                     New Arrival
                   </a>
                 </li>
                 <li>
-                  <a href="">Bestseller</a>
+                  <a className="font-popins font-medium text-[18px]" href="">
+                    Bestseller
+                  </a>
                 </li>
                 <li>
-                  <a href="">Featured Products</a>
+                  <a className="font-popins font-medium text-[18px]" href="">
+                    Featured Products
+                  </a>
                 </li>
               </ul>
             </div>
 
-            <div className="items grid grid-cols-4 gap-4 bg-[#F6F6F6] mb-14">
+            <div className="items grid grid-cols-2 gap-2 sm:grid-cols-4 gap-4 bg-[#F6F6F6] mb-14">
               <div className=" bg-[]">
                 <div className="flex justify-end ">
                   <FaHeart className="text-[25px] mt-4" />

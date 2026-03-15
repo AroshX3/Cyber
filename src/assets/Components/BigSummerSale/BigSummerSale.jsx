@@ -1,11 +1,12 @@
-// src/components/BigSummerSale.jsx
+
 import React from "react";
-import banner from "../../images/Footerbanner.png";
+import banner from "../../images/bal/Footerbanner.png";
+import { Link } from "react-router";
 
 const BigSummerSale = () => {
   return (
     <section
-      // use imported image so bundlers correctly resolve it
+      
       style={{ backgroundImage: `url(${banner})` }}
       className="bg-cover bg-center"
     >
@@ -19,13 +20,13 @@ const BigSummerSale = () => {
             Commodo fames vitae vitae leo mauris in. Eu consequat.
           </p>
 
-          <a
-            href="#"
-            className="inline-block mt-8 md:mt-10 px-6 md:px-14 py-3 md:py-4 text-[14px] md:text-[16px] border border-white rounded-lg text-white bg-transparent hover:bg-white hover:text-black transition"
+          <Link
+            to="/productpage"
+            className="inline-block font-popins font-medium text-[16px] leading-6 mt-8 md:mt-10 px-6 md:px-14 py-3 md:py-4 text-[14px] md:text-[16px] border border-white rounded-lg text-white bg-transparent hover:bg-white hover:text-black transition"
             role="button"
           >
             Shop Now
-          </a>
+          </Link>
         </div>
       </div>
     </section>

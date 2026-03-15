@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState } from "react";
-import logo from "../../images/cyber_logo.png";
+import logo from "../../images/bal/cyber_logo.png";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
@@ -28,18 +28,14 @@ const Navbar = () => {
 
   return (
     <header className="w-full">
-      {/* TOP NAV */}
       <nav className="bg-white">
         <div className="container">
-          <div className="pt-5 pb-3 flex items-center gap-4">
-            {/* logo */}
+          <div className="pt-5 pb-3 flex justify-around md:flex-none items-center gap-4">
             <div className="logo pr-4">
               <Link to="/">
-                <img src={logo} alt="logo" className="h-9 object-contain" />
+                <img src={logo} alt="logo" className="h-9 object-contain pl-4 sm:p-0" />
               </Link>
             </div>
-
-            {/* desktop search (hidden on small) */}
             <div className="relative hidden md:flex items-center flex-1 max-w-[560px]">
               <IoIosSearch className="absolute left-3 text-gray-400 text-[18px]" />
               <input
@@ -50,48 +46,40 @@ const Navbar = () => {
                 className="pl-10 pr-4 py-3 w-full rounded-lg font-popins text-[14px] leading-5 bg-[#F5F5F5] focus:outline-none"
               />
             </div>
-
-            {/* desktop menu links (hidden on small) */}
             <div className="menu hidden md:block pl-6">
               <ul className="flex gap-8">
                 <li>
-                  <Link
-                    className="hover:text-black transition-colors duration-200"
-                    to="/"
-                  >
+                  <Link className="font-popins font-normal text-[16px] " to="/">
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="hover:text-black transition-colors duration-200"
-                    to="/about"
+                    className="font-popins font-normal text-[16px] "
+                    to="/"
                   >
                     About
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="hover:text-black transition-colors duration-200"
-                    to="/contact"
+                    className="font-popins font-normal text-[16px] "
+                    to="/"
                   >
                     Contact Us
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="hover:text-black transition-colors duration-200"
-                    to="/blog"
+                    className="font-popins font-normal text-[16px] "
+                    to="/"
                   >
                     Blog
                   </Link>
                 </li>
               </ul>
             </div>
-
-            {/* right icons & mobile hamburger */}
             <div className="ml-auto flex items-center gap-4">
-              {/* mobile hamburger (shows slide-over) */}
               <button
                 className="md:hidden p-2 rounded hover:bg-gray-100"
                 aria-label="open mobile menu"
@@ -112,7 +100,6 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              {/* icons (show on sm+) */}
               <Link className="hidden sm:inline-block" to="">
                 <FaRegHeart className="text-[22px]" />
               </Link>
@@ -126,15 +113,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* CATEGORY BAR — hidden on mobile, shown on md+ */}
         <div className="hidden md:block bg-[#2E2E2E] py-2">
           <div className="container">
             <div className="Chatagory">
+              <Link to='/productpage'>
               <ul className="flex gap-6 md:gap-0 md:justify-between items-center overflow-x-auto md:overflow-visible whitespace-nowrap">
                 {categories.map((cat) => (
                   <li
                     key={cat.id}
-                    className="flex items-center gap-2 min-w-fit"
+                    className="flex items-center gap-2 font-popins font-medium text-[16px] text-[rgba(255,255,255,0.25)]"
                   >
                     <cat.Icon className="text-white/60" />
                     <a className="text-white/80" href={`#${cat.id}`}>
@@ -143,22 +130,20 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+              </Link>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* MOBILE MENU (slide-over style) */}
       {mobileOpen && (
         <div className="fixed inset-0 z-50">
-          {/* backdrop (lower z than panel so-panel receives clicks) */}
           <button
             className="absolute inset-0 bg-black/40 z-40"
             onClick={() => setMobileOpen(false)}
             aria-label="Close menu"
           />
 
-          {/* panel (on top) */}
           <div className="absolute right-0 top-0 w-11/12 max-w-[360px] h-full bg-white shadow-xl overflow-auto z-50">
             <div className="p-4 flex items-center justify-between border-b">
               <div className="flex items-center gap-3">
@@ -215,7 +200,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="block py-2 hover:text-black transition-colors"
-                    to=""
+                    to="/"
                   >
                     About
                   </Link>
@@ -223,7 +208,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="block py-2 hover:text-black transition-colors"
-                    to=""
+                    to="/"
                   >
                     Contact Us
                   </Link>
@@ -231,7 +216,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="block py-2 hover:text-black transition-colors"
-                    to=""
+                    to="/"
                   >
                     Blog
                   </Link>
@@ -246,12 +231,12 @@ const Navbar = () => {
                 {categories.map((cat) => (
                   <li key={cat.id} className="flex items-center gap-2">
                     <cat.Icon className="text-gray-600" />
-                    <a
-                      href={`#${cat.id}`}
+                    <Link
+                      to={`/productpage`}
                       className="block py-2 hover:text-black transition-colors"
                     >
                       {cat.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -265,13 +250,6 @@ const Navbar = () => {
                 </Link>
 
                 {/* checkout / CTA link — adjust route as needed */}
-                <Link
-                  className="py-2 px-4 rounded font-popins text-[16px] font-medium bg-black text-white"
-                  to=""
-                >
-                  Check Out
-                </Link>
-
                 <Link className="p-3 rounded bg-gray-100" to="/shopcart">
                   <IoCartOutline className="text-[18px]" />
                 </Link>
